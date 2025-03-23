@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-// ...existing imports...
+import { FormsModule } from '@angular/forms'; // Add this import
+import { AuthModule } from './auth/auth.module'; // Import AuthModule
 
 @NgModule({
   declarations: [
@@ -12,6 +13,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule, // Add this to the imports array
+    AuthModule // Add AuthModule to imports
     // ...existing imports...
   ],
   providers: [],
