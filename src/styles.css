@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+  display: flex;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  flex-direction: column;
+}
+
+.content {
+  margin-left: 200px; /* Default margin when sidebar is open */
+  padding: 20px;
+  flex: 1;
+  transition: margin-left 0.3s ease;
+  margin-top: 64px; /* Adjust for toolbar height */
+}
+
+.sidebar.closed + .content {
+  margin-left: 60px; /* Adjust margin when sidebar is closed */
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 60px; /* Default margin for smaller screens */
+  }
+
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar.closed {
+    width: 0;
+  }
+
+  .sidebar.closed + .content {
+    margin-left: 0; /* No margin when sidebar is closed on small screens */
+  }
+}

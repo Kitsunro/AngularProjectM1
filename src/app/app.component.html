@@ -1,0 +1,17 @@
+<app-toolbar (toggleSidebar)="toggleSidebar()"></app-toolbar>
+<app-sidebar [class.closed]="!isSidebarOpen"></app-sidebar>
+<div class="sidenav" [class.closed]="!isSidebarOpen">
+  <!-- Sidenav content -->
+</div>
+<div class="content" [class.responsive]="isResponsive">
+  <h1>
+    <nav>
+      <a routerLink="/home">{{titre}}</a>
+    </nav>
+  </h1>
+  <button mat-raised-button color="primary" (click)="genererDonneesDeTest()">
+    PEUPLER BD AVEC DONNEES DE TEST
+  </button>
+  <router-outlet></router-outlet>
+</div>
+
