@@ -16,6 +16,7 @@ export const routes: Routes = [
     // Pour l'ajout d'assignments
     // On y accèdera avec l'URL : http://localhost:4200/add
     {path: 'add', component: AddAssignmentComponent, canActivate: [AuthGuard]},
+    {path : 'assignments', component: AssignmentsComponent, canActivate: [AuthGuard]},
  // Pour le détail d'un assignment
     // On y accèdera avec l'URL : http://localhost:4200/assignment/1 ou
     // http://localhost:4200/assignment/2 ou ... avec 1 
