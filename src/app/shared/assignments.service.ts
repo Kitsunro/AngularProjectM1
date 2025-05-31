@@ -60,6 +60,13 @@ assignments:Assignment[] = [];
       nouvelAssignment.nom = a.nom;
       nouvelAssignment.dateDeRendu = new Date(a.dateDeRendu);
       nouvelAssignment.rendu = a.rendu;
+      nouvelAssignment.eleve = a.eleve;
+      nouvelAssignment.matiere = a.matiere;
+      nouvelAssignment.imageMatiere = a.imageMatiere;
+      nouvelAssignment.professeur = a.professeur;
+      nouvelAssignment.imageProfesseur = a.imageProfesseur;
+      nouvelAssignment.note = a.note;
+      nouvelAssignment.remarques = a.remarques;
 
       // J'appelle le service d'insertion d'un assignment
       // et je l'insère dans la base de données via le 
