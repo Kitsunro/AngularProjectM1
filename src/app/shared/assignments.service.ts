@@ -10,7 +10,7 @@ import { bdInitialAssignments } from './data';
 })
 export class AssignmentsService {
   //backendURL = 'http://localhost:8010/api/assignments';
-  backendURL = 'https://angularbackm2mbdsesatic2024-2025.onrender.com/api/assignments';
+  backendURL = 'https://angularprojectm1.onrender.com/api/assignments'  //'https://angularbackm2mbdsesatic2024-2025.onrender.com/api/assignments';
 
 
 assignments:Assignment[] = [];
@@ -88,6 +88,11 @@ assignments:Assignment[] = [];
       nouvelAssignment.nom = a.nom;
       nouvelAssignment.dateDeRendu = new Date(a.dateDeRendu);
       nouvelAssignment.rendu = a.rendu;
+      nouvelAssignment.eleve = a.eleve;
+      nouvelAssignment.matiere = a.matiere;
+      nouvelAssignment.imageMatiere = a.imageMatiere;
+      nouvelAssignment.professeur = a.professeur;
+      nouvelAssignment.imageProfesseur = a.imageProfesseur;
  
       appelsVersAddAssignment.push(this.addAssignment(nouvelAssignment))
     });
