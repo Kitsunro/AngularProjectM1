@@ -1,4 +1,7 @@
 let Assignment = require('../model/assignment');
+const cors = require('cors');
+// Enable CORS for all HTTP methods
+app.use(cors());
 
 // Récupérer tous les assignments (GET)
 function getAssignments(req, res){
