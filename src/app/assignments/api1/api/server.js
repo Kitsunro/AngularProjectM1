@@ -2,21 +2,17 @@ let express = require('express');
 let app = express();
 let bodyParser = require('body-parser');
 let assignment = require('./routes/assignments');
-const cors = require('cors');
-// Enable CORS for all HTTP methods
-app.use(cors());
 
 let mongoose = require('mongoose');
-
 mongoose.Promise = global.Promise;
 //mongoose.set('debug', true);
 
 // remplacer toute cette chaine par l'URI de connexion à votre propre base dans le cloud s
 const uri = 'mongodb+srv://alai06:y8sVPLuVy6Y5GZvh@projetweb.ga1ue.mongodb.net/assignementsDB?retryWrites=true&w=majority&appName=ProjetWeb';
+
 const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useFindAndModify:false
 };
 
 mongoose.connect(uri, options)
