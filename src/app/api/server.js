@@ -2,6 +2,9 @@ let express = require('express');
 let app = express();
 let bodyParser = require('body-parser');
 let assignment = require('./routes/assignments');
+const cors = require('cors');
+// Enable CORS for all HTTP methods
+app.use(cors());
 
 let mongoose = require('mongoose');
 
