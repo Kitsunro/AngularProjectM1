@@ -1,5 +1,6 @@
 export class Assignment {
-    _id!: string;
+    _id!: string; // Pour la data table angula
+    id!: number;
     nom!: string;
     dateDeRendu!: Date;
     rendu!: boolean;

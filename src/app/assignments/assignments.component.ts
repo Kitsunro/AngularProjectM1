@@ -39,7 +39,7 @@ export class AssignmentsComponent implements OnInit {
   prevPage = null;
   nextPage = 2;
   // Pour la data table angular
-  displayedColumns: string[] = ['nom', 'dateDeRendu', 'rendu'];
+  displayedColumns: string[] = ['nom', 'dateDeRendu', 'rendu', 'eleve', 'matiere','imageMatiere', 'professeur','imageProfesseur', 'note', 'remarques'];
 
   // Attention, pour l'injection de service, mettre en private !!! Sinon
   // ça ne marche pas
@@ -73,10 +73,12 @@ export class AssignmentsComponent implements OnInit {
         this.hasNextPage = data.hasNextPage;
         this.prevPage = data.prevPage;
         this.nextPage = data.nextPage;
-
+        console.log("Assignments reçus : ", this.assignments);
         console.log("Données reçues dans le subscribe");
+ 
       });
     console.log("APRES L'APPEL AU SERVICE");
+    
   }
 
   pageSuivante() {
